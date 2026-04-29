@@ -111,7 +111,8 @@ export default function Home() {
   const [metadata, setMetadata] = useState({ locations: [], cuisines: [] });
 
   useEffect(() => {
-    fetch("/api/metadata")
+    const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || "";
+    fetch(`${API_BASE}/api/metadata`)
       .then(res => res.json())
       .then(data => {
         if (data.locations) {
@@ -149,8 +150,8 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      // Mocking fetch to backend, wait 1s then show default ones
-      const res = await fetch("/api/recommend", {
+      const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || "";
+      const res = await fetch(`${API_BASE}/api/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
