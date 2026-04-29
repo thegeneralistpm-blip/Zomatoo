@@ -1,0 +1,8 @@
+datasets
+pandas
+pyarrow
+flask
+flask-cors
+python-dotenv
+groq
+pytest

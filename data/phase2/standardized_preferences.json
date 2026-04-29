@@ -1,0 +1,9 @@
+﻿{
+  "location": "bellandur",
+  "budget_label": "custom",
+  "budget_min": 0,
+  "budget_max": 2000,
+  "cuisines": [],
+  "minimum_rating": 4.0,
+  "optional_preferences": []
+}

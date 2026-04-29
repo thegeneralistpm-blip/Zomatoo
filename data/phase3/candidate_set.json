@@ -1,0 +1,174 @@
+{
+  "status": "success",
+  "message": "Candidates generated with strict filters.",
+  "fallback_actions": [],
+  "applied_filters": {
+    "location": "bellandur",
+    "minimum_rating": 4.0,
+    "budget_max": 2000,
+    "preferred_cuisines": []
+  },
+  "candidate_count": 20,
+  "candidates": [
+    {
+      "restaurant_name": "#FeelTheROLL",
+      "location": "Bellandur",
+      "cuisine": "Fast Food",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "38 Sugar Lane",
+      "location": "Bellandur",
+      "cuisine": "Bakery, Desserts",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "4 States",
+      "location": "Bellandur",
+      "cuisine": "South Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "4-States",
+      "location": "Bellandur",
+      "cuisine": "South Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "@ The Bbq",
+      "location": "Bellandur",
+      "cuisine": "BBQ, Continental, North Indian, Chinese, Beverages",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Aaha Andhra",
+      "location": "Bellandur",
+      "cuisine": "Andhra, Biryani, North Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Aapni Rasoi",
+      "location": "Bellandur",
+      "cuisine": "North Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Abbabi Chicken",
+      "location": "Bellandur",
+      "cuisine": "Fast Food",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Abhiruchi Restaurant",
+      "location": "Bellandur",
+      "cuisine": "Fast Food, Biryani, Chinese",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Al Khansah",
+      "location": "Bellandur",
+      "cuisine": "Biryani, Mughlai, Chinese, North Indian, Kebab",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Al Khansah",
+      "location": "Bellandur",
+      "cuisine": "North Indian, Mughlai, Biryani, Chinese",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Al Khwaja",
+      "location": "Bellandur",
+      "cuisine": "North Indian, Chinese",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "All In One Desi Khana",
+      "location": "Bellandur",
+      "cuisine": "North Indian, Chinese, Biryani",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Ambur Biriyani Centre",
+      "location": "Bellandur",
+      "cuisine": "Biryani",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Ambur Dum Biriyani",
+      "location": "Bellandur",
+      "cuisine": "Biryani",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Ambur Dum Biryani",
+      "location": "Bellandur",
+      "cuisine": "Biryani, South Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Ammi's Biryani",
+      "location": "Bellandur",
+      "cuisine": "Biryani, North Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Ande Ka Funda",
+      "location": "Bellandur",
+      "cuisine": "Fast Food",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Andhra Bhojanam",
+      "location": "Bellandur",
+      "cuisine": "Andhra",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    },
+    {
+      "restaurant_name": "Andhra Spicy",
+      "location": "Bellandur",
+      "cuisine": "Andhra, Biryani",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0
+    }
+  ]
+}

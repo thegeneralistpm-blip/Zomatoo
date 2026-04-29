@@ -1,0 +1,58 @@
+{
+  "status": "success",
+  "source": "llm",
+  "recommendations": [
+    {
+      "rank": 1,
+      "restaurant_name": "4 States",
+      "location": "Bellandur",
+      "cuisine": "South Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0,
+      "reason": "Located in Bellandur, 4 States serves South Indian cuisine which might appeal to a wide range of customers."
+    },
+    {
+      "rank": 2,
+      "restaurant_name": "4-States",
+      "location": "Bellandur",
+      "cuisine": "South Indian",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0,
+      "reason": "4-States, also in Bellandur, offers South Indian cuisine, potentially providing a similar experience to 4 States."
+    },
+    {
+      "rank": 3,
+      "restaurant_name": "@ The Bbq",
+      "location": "Bellandur",
+      "cuisine": "BBQ, Continental, North Indian, Chinese, Beverages",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0,
+      "reason": "At The Bbq in Bellandur offers a diverse range of cuisines including BBQ, Continental, North Indian, Chinese, and Beverages, catering to various tastes."
+    },
+    {
+      "rank": 4,
+      "restaurant_name": "#FeelTheROLL",
+      "location": "Bellandur",
+      "cuisine": "Fast Food",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0,
+      "reason": "#FeelTheROLL, a Fast Food restaurant in Bellandur, could be a quick and easy option for users looking for a casual meal."
+    },
+    {
+      "rank": 5,
+      "restaurant_name": "38 Sugar Lane",
+      "location": "Bellandur",
+      "cuisine": "Bakery, Desserts",
+      "cost_for_two": null,
+      "rating": null,
+      "pre_llm_score": 0.0,
+      "reason": "38 Sugar Lane, a Bakery and Desserts place in Bellandur, is suitable for those with a sweet tooth or looking for a light bite."
+    }
+  ],
+  "comparison_summary": "The top recommendations are based on location, with all candidates being in Bellandur. Since specific ratings and costs are not provided, the ranking focuses on the diversity of cuisines offered and the potential appeal to a broad audience. South Indian cuisine is represented by 4 States and 4-States, while @ The Bbq offers the widest range of cuisines. #FeelTheROLL and 38 Sugar Lane cater to different needs, with one being a fast food option and the other specializing in bakery and desserts.",
+  "llm_model": "llama-3.3-70b-versatile"
+}

@@ -1,0 +1,30 @@
+# Node.js
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
+npm-debug.log*
+
+# Python
+backend/__pycache__/
+phase1/__pycache__/
+phase2/__pycache__/
+phase3/__pycache__/
+phase4/__pycache__/
+tests/__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment / Sensitive
+.env
+
+# Large OS files
+.DS_Store
+Thumbs.db
