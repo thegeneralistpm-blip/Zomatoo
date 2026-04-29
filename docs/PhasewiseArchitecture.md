@@ -295,7 +295,23 @@ frontend/
 
 ---
 
-### 5C: Data Flow (End-to-End)
+### 5C: Streamlit Cloud UI (Alternative Frontend)
+
+#### Architecture
+A lightweight, Python-native frontend designed specifically for rapid deployment on **Streamlit Community Cloud**. It bypasses the Flask API to directly invoke the backend Python pipeline, significantly reducing deployment complexity.
+
+#### Key Features
+- **Direct Pipeline Integration**: Imports `run_pipeline` from `backend.services.pipeline` natively instead of making HTTP requests.
+- **Serverless-Friendly**: Requires only a GitHub repository connected to Streamlit Cloud. No separate backend server provisioning needed.
+- **Caching**: Uses `@st.cache_data` to load the dataset into memory once per session/container, minimizing latency.
+- **UI Components**: 
+  - Dual-column layout for preferences
+  - Customized CSS for aesthetic dark-mode restaurant cards
+  - Real-time pipeline processing with loading spinners
+
+---
+
+### 5D: Data Flow (End-to-End via API)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -361,9 +377,10 @@ Run the system in production with monitoring and continuous improvement.
 
 ### Components
 - **Service Deployment**:
-  - Backend: Flask behind Gunicorn/Waitress
-  - Frontend: Static files served via Nginx or Flask static
-  - Docker Compose for containerized deployment
+  - Backend: Flask behind Gunicorn/Waitress (for API clients)
+  - Frontend (Node.js): Static files served via Next.js or Nginx
+  - **Frontend (Streamlit)**: Hosted natively on Streamlit Community Cloud linked via GitHub.
+  - Docker Compose for full containerized deployment (optional)
 - **Caching**:
   - Cache repeated preference queries
   - Cache LLM responses for cost control
@@ -440,6 +457,8 @@ Zomatooo/
 │   ├── next.config.mjs
 │   ├── package.json
 │   └── public/
+│
+├── streamlit_app.py             # ★ Phase 5C — Streamlit Cloud Frontend
 │
 ├── tests/                       # Phase 6 — Quality & testing
 │   ├── test_phase2.py
