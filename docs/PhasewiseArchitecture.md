@@ -295,23 +295,7 @@ frontend/
 
 ---
 
-### 5C: Streamlit Cloud UI (Alternative Frontend)
-
-#### Architecture
-A lightweight, Python-native frontend designed specifically for rapid deployment on **Streamlit Community Cloud**. It bypasses the Flask API to directly invoke the backend Python pipeline, significantly reducing deployment complexity.
-
-#### Key Features
-- **Direct Pipeline Integration**: Imports `run_pipeline` from `backend.services.pipeline` natively instead of making HTTP requests.
-- **Serverless-Friendly**: Requires only a GitHub repository connected to Streamlit Cloud. No separate backend server provisioning needed.
-- **Caching**: Uses `@st.cache_data` to load the dataset into memory once per session/container, minimizing latency.
-- **UI Components**: 
-  - Dual-column layout for preferences
-  - Customized CSS for aesthetic dark-mode restaurant cards
-  - Real-time pipeline processing with loading spinners
-
----
-
-### 5D: Data Flow (End-to-End via API)
+### 5C: Data Flow (End-to-End via API)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -376,11 +360,10 @@ Ensure recommendation quality, stability, and correctness.
 Run the system in production with monitoring and continuous improvement.
 
 ### Components
-- **Service Deployment**:
-  - Backend: Flask behind Gunicorn/Waitress (for API clients)
-  - Frontend (Node.js): Static files served via Next.js or Nginx
-  - **Frontend (Streamlit)**: Hosted natively on Streamlit Community Cloud linked via GitHub.
-  - Docker Compose for full containerized deployment (optional)
+- **Service Deployment (Two-Tier Architecture)**:
+  - **Backend (API)**: Flask application deployed on **Render** (Web Service). Uses Gunicorn to serve API endpoints.
+  - **Frontend (UI)**: Next.js application deployed on **Vercel**. Communicates with the Render backend via environment variables (`NEXT_PUBLIC_BACKEND_URL`).
+  - Docker Compose for local/containerized testing (optional)
 - **Caching**:
   - Cache repeated preference queries
   - Cache LLM responses for cost control
@@ -458,7 +441,7 @@ Zomatooo/
 │   ├── package.json
 │   └── public/
 │
-├── streamlit_app.py             # ★ Phase 5C — Streamlit Cloud Frontend
+├── render.yaml                  # Render automated deployment config (optional)
 │
 ├── tests/                       # Phase 6 — Quality & testing
 │   ├── test_phase2.py
