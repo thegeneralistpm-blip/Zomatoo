@@ -111,9 +111,18 @@ export default function Home() {
   const [metadata, setMetadata] = useState({ locations: [], cuisines: [] });
 
   useEffect(() => {
-    const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || "";
-    fetch(`${API_BASE}/api/metadata`)
-      .then(res => res.json())
+    const getApiUrl = (path) => {
+      const base = process.env.NEXT_PUBLIC_BACKEND_URL;
+      if (!base || base === "undefined" || base === "") return path;
+      return `${base.replace(/\/$/, "")}${path}`;
+    };
+
+    console.log("Fetching metadata from:", getApiUrl("/api/metadata"));
+    fetch(getApiUrl("/api/metadata"))
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
       .then(data => {
         if (data.locations) {
           setMetadata({
@@ -150,8 +159,13 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || "";
-      const res = await fetch(`${API_BASE}/api/recommend`, {
+      const getApiUrl = (path) => {
+        const base = process.env.NEXT_PUBLIC_BACKEND_URL;
+        if (!base || base === "undefined" || base === "") return path;
+        return `${base.replace(/\/$/, "")}${path}`;
+      };
+
+      const res = await fetch(getApiUrl("/api/recommend"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
