@@ -165,13 +165,22 @@ export default function Home() {
         return `${base.replace(/\/$/, "")}${path}`;
       };
 
+      const mapBudget = (val) => {
+        if (!val) return "medium";
+        const b = val.toLowerCase();
+        if (b.includes("500") && !b.includes("1000")) return "low";
+        if (b.includes("1000") || b.includes("1500")) return "medium";
+        if (b.includes("2000")) return "high";
+        return "medium";
+      };
+
       const res = await fetch(getApiUrl("/api/recommend"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          location: location || "Gwalior",
+          location: location || "Indiranagar",
           cuisine: cuisine || "All",
-          budget: budget || "medium",
+          budget: mapBudget(budget),
           minimum_rating: minRating.replace("+", ""),
           optional_preferences: optionalPrefs + (isVegOnly ? (optionalPrefs ? ", Pure Veg" : "Pure Veg") : ""),
         }),
