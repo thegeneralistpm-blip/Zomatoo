@@ -112,8 +112,9 @@ export default function Home() {
 
   useEffect(() => {
     const getApiUrl = (path) => {
-      const base = process.env.NEXT_PUBLIC_BACKEND_URL;
+      let base = process.env.NEXT_PUBLIC_BACKEND_URL;
       if (!base || base === "undefined" || base === "") return path;
+      if (!base.startsWith("http")) base = `https://${base}`;
       return `${base.replace(/\/$/, "")}${path}`;
     };
 
@@ -160,8 +161,9 @@ export default function Home() {
     setLoading(true);
     try {
       const getApiUrl = (path) => {
-        const base = process.env.NEXT_PUBLIC_BACKEND_URL;
+        let base = process.env.NEXT_PUBLIC_BACKEND_URL;
         if (!base || base === "undefined" || base === "") return path;
+        if (!base.startsWith("http")) base = `https://${base}`;
         return `${base.replace(/\/$/, "")}${path}`;
       };
 
