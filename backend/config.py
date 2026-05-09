@@ -17,6 +17,6 @@ DEFAULT_TOP_K = 5
 DEFAULT_TOP_N = 20
 
 # Server settings
-HOST = "127.0.0.1"
-PORT = 5000
-DEBUG = False
+HOST = os.getenv("HOST", "0.0.0.0")
+PORT = int(os.getenv("PORT", 5000))
+DEBUG = os.getenv("FLASK_DEBUG", "false").lower() == "true"
